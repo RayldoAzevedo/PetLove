@@ -1,7 +1,7 @@
 import { Container, Row, Col, Media, Nav, NavItem, NavLink, Button } from "reactstrap";
 import Image from "next/image";
 
-const Banner = () => (
+const CadUser = () => (
     <Container>
         <Row>
             <Col>
@@ -122,4 +122,4 @@ const Banner = () => (
 
 );
 
-export default Banner;
+export default CadUser;
