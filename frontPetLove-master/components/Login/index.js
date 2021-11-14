@@ -28,7 +28,10 @@ const Login = () =>(
             </div>
             <div className="d-grid gap-2">
                 <button type="submit" class="btn btn-primary btvejamais lg">Entrar</button>
-            </div>          
+            </div>  
+            <p class="link">
+                <br/>Ainda não tem conta?<a href="/cadastrouser">Cadastre-se</a>
+            </p>        
             </form>
         </Col>
     </Row>

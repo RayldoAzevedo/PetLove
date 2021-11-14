@@ -15,7 +15,7 @@ const Banner = () =>(
             </Col>
             <Col>
               <Row style={{ justifyContent: 'center'}}> Siga nossas redes    </Row>
-              <Row><Col style={{textAlign: 'right'}}> <Image src="/face.svg" width={58} height={58} /></Col><Col>  <Image src="/face.svg" width={58} height={58} /> </Col> </Row>
+              <Row><Col style={{textAlign: 'right'}}> <Image src="/face.svg" width={58} height={58} /></Col><Col>  <Image src="/inst.png" width={58} height={58} /> </Col> </Row>
 
             </Col>
 

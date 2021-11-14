@@ -49,6 +49,18 @@ a {
   margin-bottom: 40px;
 }
 
+.link{ 
+  background: #e1eaeb;
+  color: #7f7c7c;
+  left: 0px;
+  height: 20px;
+  width: 440px;  
+  font-size: 16px;
+  border-top: 1px solid #dbe5e8; 
+  -webkit-border-radius: 0 0  5px 5px;
+  border-radius: 0 0  5px 5px;
+}
+
 .btentrar {
   width: 170px;
   background: #3F213B !important;
@@ -94,6 +106,13 @@ a {
 .pegadas{
   text-align: right;
 }
+select{border-radius: 12px; background-color: white !important;}
+
+tr, td, th {border-radius: 12px; background-color: #3F213B; color: aliceblue;  border: solid 8px; }
+table{border: solid 10px; }
+
+.tablespace {padding-top: 15px;}
+
 
 
 .banner{
