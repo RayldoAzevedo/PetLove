@@ -12,7 +12,7 @@ export default function Home() {
     <div >
         {/* <Top/>  */}
         <TopLogin/> 
-        <div className="container ">
+        <div className="container corpo">
             <h1 className="d-flex justify-content-center">Cadastro de usuário</h1>
 
             <Row className={Styles.borda}> 
@@ -21,12 +21,12 @@ export default function Home() {
             </Row>
 
             <div className="card">
-                <div className="card-header text-center">
-                    <h2>Cadastre seu usuário</h2>
+                <div className="card-header text-center" id={Styles.h1}>
+                    <h2 className={Styles.h2}>Cadastre seu usuário</h2>
                 </div>
-                <div className="card-body">
+                <div className="card-body" id={Styles.corpo}>
 
-                    <div className={'text-center'}><p className={Styles.text}>Coloque seus dados abaixo para cadastrar seu usuário:</p></div>
+                    <div className='text-center' id={Styles.h1, Styles.h2}><p className={Styles.text}>Coloque seus dados abaixo para cadastrar seu usuário:</p></div>
 
                     <form action="" method="post" >
 
