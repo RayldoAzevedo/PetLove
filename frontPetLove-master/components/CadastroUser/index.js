@@ -1,15 +1,16 @@
 import { Container, Row, Col, Media, Nav, NavItem, NavLink, Button } from "reactstrap";
 import Image from "next/image";
+import Styles from "../../styles/User.module.css"
 
 const CadUser = () => (
     <>
-        <div className="container">
-            <h1>Cadastro de usuário</h1>
+        <div className="container ">
+            <h1 className="d-flex justify-content-center">Cadastro de usuário</h1>
 
-            <div className="imgCadastro">
-                <Image src="/cadastroDog.png" alt="dogCadastro" width={170} height={240} />
-                <Image src="/pegadas.png" alt="dogCadastro" width={256} height={105} />
-            </div>
+            <Row className={Styles.borda}> 
+            <Col ><Image src="/pegadas.png" alt="dogCadastro" width={256} height={105} /></Col>               
+            <Col ><Image src="/cadastroDog.png" alt="dogCadastro" width={170} height={240} /></Col>                  
+            </Row>
 
             <div className="card">
                 <div className="card-header text-center">
@@ -17,7 +18,7 @@ const CadUser = () => (
                 </div>
                 <div className="card-body">
 
-                    <div className='text-center text'>Coloque seus dados abaixo para cadastrar seu usuário:</div>
+                    <div className={'text-center'}><p className={Styles.text}>Coloque seus dados abaixo para cadastrar seu usuário:</p></div>
 
                     <form action="" method="post" >
 
@@ -134,10 +135,16 @@ const CadUser = () => (
 
                 </div>
                 <div className="card-footer">
-                    <button className='btn btn-primary btn-lg btn-editar' onClick={'#'}>Cadastrar</button>
+                    <div className="container d-flex justify-content-center">
+                        <button className={Styles.btregistrar} onClick={'#'}>Cadastrar</button>
+                    </div>
                 </div>
             </div>
 
+        </div>
+
+        <div className={Styles.alinhar}>
+            <Image src="/pegadas.png" alt="dogCadastro" width={256} height={105} />
         </div>
     </>
 

@@ -1,7 +1,5 @@
-import Image from "next/image";
 import { Container} from "reactstrap";
 import 'bootstrap/dist/css/bootstrap.min.css';
-import { CSSModule } from "reactstrap";
 
 const Contato = () => {
     return(    
