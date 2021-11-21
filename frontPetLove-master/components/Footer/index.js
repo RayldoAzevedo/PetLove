@@ -1,8 +1,7 @@
 import { Container, Row, Col, Media, Nav, NavItem, NavLink, Button} from 'reactstrap';
 import Image from 'next/image';
 
-
-const Banner = () =>(
+const Footer = () =>(
   <div className="divfooter">
     <Container>
     <Row>
@@ -54,19 +53,16 @@ const Banner = () =>(
             <Col >
               <Nav >
                 <NavItem>
+                  <NavLink href="/">Home</NavLink>
+                </NavItem>
+                <NavItem>
                   <NavLink href="/" >Nossos Serviços</NavLink>
                 </NavItem>
                 <NavItem>
                   <NavLink href="/quemsomos">Quem somos</NavLink>
                 </NavItem>
                 <NavItem>
-                  <NavLink href="#">Loja</NavLink>
-                </NavItem>
-                <NavItem>
-                  <NavLink href="#">FAQ</NavLink>
-                </NavItem>
-                <NavItem>
-                  <NavLink href="#">Contato</NavLink>
+                  <NavLink href="/Contato">Contato</NavLink>
                 </NavItem>
               </Nav>
 
@@ -81,4 +77,4 @@ const Banner = () =>(
 
 );
 
-export default Banner;
+export default Footer;

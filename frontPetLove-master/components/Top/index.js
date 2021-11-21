@@ -24,7 +24,7 @@ const Top = () =>(
                 <NavLink className="nav" href="/cuidados">Pet Care</NavLink>
               </NavItem>
               <NavItem>
-                <NavLink  className="nav" href="#">Contato</NavLink>
+                <NavLink  className="nav" href="/Contato">Contato</NavLink>
               </NavItem>
             </Nav>
           </div>

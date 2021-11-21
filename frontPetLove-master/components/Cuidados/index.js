@@ -1,7 +1,7 @@
 import { Container, Row, Col, Media, Nav, NavItem, NavLink, Button} from 'reactstrap';
 import Image from 'next/image';
 
-const Top = () =>(    
+const Cuidados = () =>(    
     <Container>        
         <Row>
             <Col>
@@ -96,4 +96,4 @@ const Top = () =>(
     </Container>
 );
 
-export default Top
+export default Cuidados

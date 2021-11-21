@@ -2,7 +2,7 @@ import { Container, Row, Col, Media, Nav, NavItem, NavLink, Button} from 'reacts
 import Image from 'next/image';
 
 
-const Top = () =>(
+const TopLogin = () =>(
 <div className="container">
   
     <div className="row">
@@ -23,7 +23,7 @@ const Top = () =>(
                 <NavLink className="nav" href="/cuidados">Pet Care</NavLink>
               </NavItem>
               <NavItem>
-                <NavLink  className="nav" href="#">Contato</NavLink>
+                <NavLink  className="nav" href="/Contato">Contato</NavLink>
               </NavItem>
             </Nav>
           </div>
@@ -37,4 +37,4 @@ const Top = () =>(
 </div>
 );
 
-export default Top;
+export default TopLogin;
