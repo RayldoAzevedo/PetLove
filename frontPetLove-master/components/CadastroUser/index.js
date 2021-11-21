@@ -2,123 +2,144 @@ import { Container, Row, Col, Media, Nav, NavItem, NavLink, Button } from "react
 import Image from "next/image";
 
 const CadUser = () => (
-    <Container>
-        <Row>
-            <Col>
-                <Row>
-                    <Col>
-                        <h1 className="cadastroUser">Cadastrar usuário?</h1>
-                    </Col>
-                    <Col >
-                        <div className="topCadUser">
-                            <Image src="/pegadas.png" width={256} height={105} />
+    <>
+        <div className="container">
+            <h1>Cadastro de usuário</h1>
+
+            <div className="imgCadastro">
+                <Image src="/cadastroDog.png" alt="dogCadastro" width={170} height={240} />
+                <Image src="/pegadas.png" alt="dogCadastro" width={256} height={105} />
+            </div>
+
+            <div className="card">
+                <div className="card-header text-center">
+                    <h2>Cadastre seu usuário</h2>
+                </div>
+                <div className="card-body">
+
+                    <div className='text-center text'>Coloque seus dados abaixo para cadastrar seu usuário:</div>
+
+                    <form action="" method="post" >
+
+                        <div className="row">
+
+                            <div className="col-sm-12 col-md-12 col-lg-6">
+                                <div className="form-floating mb-3">
+
+
+
+                                    <input type="text"
+                                        className="form-control"
+                                        id="floatingInputNome"
+                                        placeholder="Seu nome"
+                                    />
+
+
+                                    <label htmlFor="floatingInputNome">Seu nome</label>
+                                </div>
+                            </div>
+
+                            <div className="col-sm-12 col-md-12 col-lg-6">
+                                <div className="form-floating mb-3">
+                                    <input type="text" className="form-control" id="floatingInputSobrenome" placeholder="Seu sobrenome" />
+                                    <label htmlFor="floatingInputSobrenome">Seu sobrenome</label>
+                                </div>
+                            </div>
+
                         </div>
-                    </Col>
-                </Row>
-            </Col>
-            
-        <Row>
-            <Col>
-                <Row>
-                    <Col>
-                    <form method="post" action="" id="userdados">
-                        <h1>Cadastro</h1>
-                        <p>
-                        <label for="nome_cad">Seu nome</label>
-                        <input id="nome_cad" name="nome_cad" required="required" maxLength="25" minLength="2" type ="text" placeholder="nome" />
-                        </p>
-                        
-                        <p>
-                        <label for="sobrenome_cad">Sobrenome</label>
-                        <input id="sobrenome_cad" name="sobrenome_cad" required="required" maxLength ="40" minLength="2" type ="text" placeholder="sobrenome" />
-                        </p>
 
-                        <p>
-                        <label for="endereco_cad">Endereço</label>
-                        <input id="endereco_cad" name="endereco_cad" required="required" maxLength="50" minLength="2" type ="text" placeholder="endereço" />
-                        </p>
+                        <div className="row my-3">
+                            <div className="col-sm-12 col-md-12 col-lg-6">
+                                <div className="form-floating mb-3">
+                                    <input type="text" className="form-control" id="floatingInputEndereco" placeholder="Endereço" />
+                                    <label htmlFor="floatingInputEndereco">Endereço</label>
+                                </div>
+                            </div>
 
-                        <p>
-                        <label for="complemento_cad">Complemento</label>
-                        <input id="complemento_cad" name="complemento_cad" maxLength="25" minLength="2" required="required" type ="text"
-                        placeholder="complemento" />
-                        </p>
+                            <div className="col-sm-12 col-md-12 col-lg-6">
+                                <div className="form-floating mb-3">
+                                    <input type="text" className="form-control" id="floatingInputBairro" placeholder="Bairro" />
+                                    <label htmlFor="floatingInputBairro">Bairro</label>
+                                </div>
+                            </div>
 
-                        <p>
-                        <label for="bairro_cad">Bairro</label>
-                        <input id="bairro_cad" name="bairro_cad" required="required" maxLength="20" minLength="2" type ="text" placeholder="bairro" />
-                        </p>
+                            <div className="col-sm-12 col-md-12 col-lg-6">
+                                <div className="form-floating mb-3">
+                                    <input type="text" className="form-control" id="floatingInputCidade" placeholder="Cidade" />
+                                    <label htmlFor="floatingInputCidade">Cidade</label>
+                                </div>
+                            </div>
 
-                        <p>
-                        <label for="cidade_cad">Cidade</label>
-                        <input id="cidade_cad" name="cidade_cad" required="required" maxLength="25" minLength="2" type ="text" placeholder="cidade" />
-                        </p>
+                            <div className="col-sm-12 col-md-12 col-lg-6">
+                                <div className="form-floating">
+                                    <select name="estado" className="form-select" id="floatingSelectEstado">
+                                        <option value="ac">Acre</option>
+                                        <option value="al">Alagoas</option>
+                                        <option value="am">Amazonas</option>
+                                        <option value="ap">Amapá</option>
+                                        <option value="ba">Bahia</option>
+                                        <option value="ce">Ceará</option>
+                                        <option value="df">Distrito Federal</option>
+                                        <option value="es">Espírito Santo</option>
+                                        <option value="go">Goiás</option>
+                                        <option value="ma">Maranhão</option>
+                                        <option value="mt">Mato Grosso</option>
+                                        <option value="ms">Mato Grosso do Sul</option>
+                                        <option value="mg">Minas Gerais</option>
+                                        <option value="pa">Pará</option>
+                                        <option value="pb">Paraíba</option>
+                                        <option value="pr">Paraná</option>
+                                        <option value="pe">Pernambuco</option>
+                                        <option value="pi">Piauí</option>
+                                        <option value="rj">Rio de Janeiro</option>
+                                        <option value="rn">Rio Grande do Norte</option>
+                                        <option value="ro">Rondônia</option>
+                                        <option value="rs">Rio Grande do Sul</option>
+                                        <option value="rr">Roraima</option>
+                                        <option value="sc">Santa Catarina</option>
+                                        <option value="se">Sergipe</option>
+                                        <option value="sp">São Paulo</option>
+                                        <option value="to">Tocantins</option>
+                                    </select>
+                                    <label htmlFor="floatingSelectEstado">Estado</label>
+                                </div>
+                            </div>
+                        </div>
 
-                        <p class="trespacamento">
-                        <tr>
-                        <td>
-                            <label for="estado">Estado:</label>
-                        </td>
-                        <td align="left">
-                            <select name="estado"> 
-                            <option value="ac">Acre</option> 
-                            <option value="al">Alagoas</option> 
-                            <option value="am">Amazonas</option> 
-                            <option value="ap">Amapá</option> 
-                            <option value="ba">Bahia</option> 
-                            <option value="ce">Ceará</option> 
-                            <option value="df">Distrito Federal</option> 
-                            <option value="es">Espírito Santo</option> 
-                            <option value="go">Goiás</option> 
-                            <option value="ma">Maranhão</option> 
-                            <option value="mt">Mato Grosso</option> 
-                            <option value="ms">Mato Grosso do Sul</option> 
-                            <option value="mg">Minas Gerais</option> 
-                            <option value="pa">Pará</option> 
-                            <option value="pb">Paraíba</option> 
-                            <option value="pr">Paraná</option> 
-                            <option value="pe">Pernambuco</option> 
-                            <option value="pi">Piauí</option> 
-                            <option value="rj">Rio de Janeiro</option> 
-                            <option value="rn">Rio Grande do Norte</option> 
-                            <option value="ro">Rondônia</option> 
-                            <option value="rs">Rio Grande do Sul</option> 
-                            <option value="rr">Roraima</option> 
-                            <option value="sc">Santa Catarina</option> 
-                            <option value="se">Sergipe</option> 
-                            <option value="sp">São Paulo</option> 
-                            <option value="to">Tocantins</option> 
-                        </select>
-                        </td>
-                        </tr>
-                        </p>
 
-                        <p>
-                        <label for="email_cad">Seu e-mail</label>
-                        <input id="email_cad" name="email_cad" required="required" maxLength="50" minLength="2" type ="email"
-                        placeholder="contato@petlove.com" />
-                        </p>
+                        <div className="row my-3">
+                            <div className="col-sm-12 col-md-12 col-lg-12">
+                                <div className="form-floating mb-3">
+                                    <input type="email" className="form-control" id="floatingInputEmail" placeholder="Seu e-mail" />
+                                    <label htmlFor="floatingInputEmail">Seu e-mail</label>
+                                </div>
+                            </div>
+                        </div>
 
-                        <p>
-                        <label for="senha_cad">Sua senha</label>
-                        <input id="senha_cad" name="senha_cad" required="required" type ="password" maxLength="15" minLength="2" placeholder="ex. 1234" />
-                        </p>
-
-                        <p>
-                        <input type ="submit" value="Cadastrar" class="btvejamais" />
-                        </p>
-
-                        <p class ="link">
-                            Já tem conta? <a href="/login"> Ir para Login </a>
-                        </p>
-
+                        <div className="row my-3">
+                            <div className="col-sm-12 col-md-12 col-lg-6">
+                                <div className="form-floating mb-3">
+                                    <input type="password" className="form-control" id="floatingInputSenha" placeholder="Sua senha" />
+                                    <label htmlFor="floatingInputSenha">Sua senha</label>
+                                </div>
+                            </div>
+                            <div className="col-sm-12 col-md-12 col-lg-6">
+                                <div className="form-floating mb-3">
+                                    <input type="password" className="form-control" id="floatingInputConfirmaSenha" placeholder="Confirme senha" />
+                                    <label htmlFor="floatingInputConfirmaSenha">Confirme senha</label>
+                                </div>
+                            </div>
+                        </div>
                     </form>
-                    </Col>
-                </Row>   
-            </Col>
-        </Row >
-        </Row>
-    </Container >
+
+                </div>
+                <div className="card-footer">
+                    <button className='btn btn-primary btn-lg btn-editar' onClick={'#'}>Cadastrar</button>
+                </div>
+            </div>
+
+        </div>
+    </>
 
 );
 
