@@ -1,121 +1,178 @@
 import { Container, Row, Col, Media, Nav, NavItem, NavLink, Button } from "reactstrap";
 import Image from "next/image";
+import Styles from "../../styles/User.module.css"
 
 const CadPet = () => (
-    <Container>
-        <Row>
-            <Col>
-                <Row>
-                    <Col>
-                        <h1 className="">Adicione seu pet para adoção</h1>
-                    </Col>
-                    <Col >
-                        <div className="">
-                            <Image src="/pegadas.png" width={256} height={105} />
-                        </div>
-                    </Col>
-                </Row>
-            </Col>
-            
-        <Row>
-            <Col>
-                <Row>
-                    <Col>
-                    <form method="post" action="" id="userdados">
-                        <h1>Pet</h1>
-                        <p>
-                        <label for="nome_pet">Nome</label>
-                        <input id="nome_pet" name="nome_pet" required="required" maxLength="25" minLength="2" type ="text" placeholder="nome do pet" />
-                        </p>
-                        <div className="tablespace">
-                            <th><label for="especie">Espécie</label></th>
-                            <tr>
-                                <select name="especie"> 
-                                    <option value="sel">Selecione</option>
-                                    <option value="canino">Canino</option> 
-                                    <option value="felino">Felino</option> 
-                                </select>
-                            </tr>
-                        </div>
-                        <div className="tablespace">
-                        <label for="raca">Raça</label>
-                        <input id="raca" name="raca" required="required" maxLength ="40" minLength="2" type ="text" placeholder="raça" />
+    <>
+        <div className="container corpo">
+            <Row className={Styles.borda}>
+                <Col ><Image src="/pegadas.png" alt="dogCadastro" width={256} height={105} /></Col>
+                <Col ><Image src="/cadastroDog.png" alt="dogCadastro" width={170} height={240} /></Col>
+            </Row>
+
+            <div className="card" id={Styles.corpo}>
+                <div className="card-header text-center" id={Styles.h1}>
+                    <h2 className={Styles.h2} id={Styles.pad}>Adicione seu pet para adoção</h2>
+                </div>
+
+                {/* formulario */}
+                <div className='text-center' id={Styles.h1, Styles.h2}></div>
+                <form method="post" action="" id="userdados">
+                    {/* nome */}
+                    <div className="row">
+                        <div className="col-sm-12 col-md-12 col-lg-6">
+                            <div className="form-floating mb-3">
+                                <input type="text"
+                                    className="form-control"
+                                    id="floatingInputNome"
+                                    placeholder="Nome do pet"
+                                />
+                                <label htmlFor="floatingInputNome">Nome do pet</label>
+                            </div>
                         </div>
 
-                        <div className="tablespace">
-                            <tr>
-                                <th><label for="sexo">Sexo</label></th>
-                            </tr>
-                            <tr>
-                                <select name="sexo"> 
-                                    <option value="sel">Selecione</option>
-                                    <option value="ma">Macho</option> 
-                                    <option value="fe">Fêmea</option> 
-                                </select>
-                                </tr>
+                        {/* nascimento */}
+                        <div className="col-sm-12 col-md-12 col-lg-6">
+                            <div className="form-floating mb-3">
+                                <input type="text"
+                                    className="form-control"
+                                    id="floatingInputNascimento"
+                                    placeholder="Data de nascimento"
+                                />
+                                <label htmlFor="floatingInputNascimento">Data de nascimento</label>
+                            </div>
                         </div>
-                        <div className="tablespace">
-                            <tr>
-                                <th><label for="porte">Tamanho</label></th>
-                            </tr>
-                            <tr>
-                                <select name="porte"> 
-                                    <option value="sel">Selecione</option>
-                                    <option value="pequeno">Pequeno</option> 
-                                    <option value="medio">Médio</option> 
-                                    <option value="grande">Grande</option> 
-                                </select>
-                            </tr>
+                    </div>
 
+                    <div className="row my-3">
+                        {/* raça */}
+                        <div className="col-sm-12 col-md-12 col-lg-6">
+                            <div className="form-floating mb-3">
+                                <input type="text"
+                                    className="form-control"
+                                    id="floatingInputRaca"
+                                    placeholder="Raça do pet"
+                                />
+                                <label htmlFor="floatingInputRaca">Raça do pet</label>
+                            </div>
                         </div>
-                        <div className="tablespace">
-                            <tr>
-                                <th><label for="comportamento">Comportamento</label></th>
-                            </tr>
-                            <tr>
-                                <select name="comportamento">
-                                    <option value="sel">Selecione</option>
+
+                        {/* caracteristica */}
+                        <div className="col-sm-12 col-md-auto col-lg-6">
+                            <div className="form-floating mb-3">
+                                <input type="text"
+                                    className="form-control"
+                                    id="floatingInputCaracteristicas"
+                                    placeholder="Características"
+                                />
+                                <label htmlFor="floatingInputCaracteristicas">Características</label>
+                            </div>
+                        </div>
+
+                    </div>
+
+                    {/* sexo */}
+                    <div className="row my-3">
+                        <div className="col-sm-12 col-md-12 col-lg-3">
+                            <div className="form-floating">
+                                <select name="Especie" className="form-select" id="floatingSelectEspecie">
+                                    <option value="sel">Espécie</option>
+                                    <option value="canino">Canino</option>
+                                    <option value="felino">Felino</option>
+                                </select>
+                                <label htmlFor="floatingSelectEspecie">Especie</label>
+                            </div>
+                        </div>
+
+                        {/* especie */}
+                        <div className="col-sm-12 col-md-12 col-lg-3 col">
+                            <div className="form-floating">
+                                <select name="Sexo" className="form-select" id="floatingSelectSexo">
+                                    <option value="sel">Sexo</option>
+                                    <option value="canino">Macho</option>
+                                    <option value="felino">Fêmea</option>
+                                </select>
+                                <label htmlFor="floatingSelectSexo">Sexo</label>
+                            </div>
+                        </div>
+
+                        {/* tamanho */}
+                        <div className="col-sm-12 col-md-auto col-lg-3 col" >
+                            <div className="form-floating">
+                                <select name="Tamanho" className="form-select" id="floatingSelectTamanho">
+                                    <option value="sel">Tamanho</option>
+                                    <option value="pequeno">Pequeno</option>
+                                    <option value="medio">Médio</option>
+                                    <option value="grande">Grande</option>
+                                </select>
+                                <label htmlFor="floatingSelectTamanho">Tamanho</label>
+                            </div>
+                        </div>
+
+                        {/* comportamento */}
+                        <div className="col-sm-12 col-md-auto col-lg-3 col">
+                            <div className="form-floating">
+                                <select name="Comportamento" className="form-select" id="floatingSelectComportamento">
+                                    <option value="sel">Comportamento</option>
                                     <option value="docil">Dócil</option>
                                     <option value="bravo">Bravo</option>
                                     <option value="bipolar">Bipolar</option>
                                     <option value="desconhecido">Desconhecido</option>
                                 </select>
-                            </tr>
+                                <label htmlFor="floatingSelectComportamento">Comportamento</label>
+                            </div>
                         </div>
-                        <div className="tablespace">
-                            <tr>
-                                <th><label>Origem*</label></th>  
-                            </tr>
-                            <tr>
-                                <td>
-                                    <input type="radio" value="pessoa" />
-                                    <label>Pessoa</label> 
-                                </td>
-                                <td>
-                                    <input type="radio" value="ong" />
-                                    <label>ONG</label> 
-                                </td>
-                                <td>
-                                    <input type="radio" value="abrigo" />
-                                    <label>Abrigo</label> 
-                                </td>  
-                            </tr>                   
-                                                                                 
+                    </div>
+
+                    {/* Origem */}
+                    {/* <div className="row my-3">
+                        <div className="col-sm-12 col-md-auto col-lg-3 col">
+                            <div className="form-floating">
+                                <select name="Origem" className="form-select" id="floatingSelectOrigem">
+                                    <option value="Origem">Origem</option>
+                                    <option value="Pessoa">Pessoa</option>
+                                    <option value="ONG">ONG</option>
+                                    <option value="Abrigo">Abrigo</option>
+                                </select>
+                                <label htmlFor="floatingSelectOrigem">Origem</label>
+                            </div>
                         </div>
-                       
-                        <p>
-                        <input type ="submit" value="Adicionar" class="btvejamais" />
-                        </p>
+                    </div> */}
 
-                      
 
-                    </form>
-                    </Col>
-                </Row>   
-            </Col>
-        </Row >
-        </Row>
-    </Container >
+                    {/* teste Origem */}
+                    <div className="container">
+                        <div className="row my-3">
+                            <div className="col-sm-12 col-md-auto col-lg-2" id={Styles.radio}>
+                                <label htmlFor="floatingSelectOrigens">Origem*</label>
+                            </div>
+                            <div className="row my-2" id={Styles.teste}>
+                                <div className="col-sm-12 col-md-auto col-lg-4">
+                                    <label>Pessoa</label>
+                                    <input type="radio" value="pessoa" name="Origem"/>
+                                </div>
+                                <div className="col-sm-12 col-md-auto col-lg-4">
+                                    <label>ONG</label>
+                                    <input type="radio" value="ONG" name="Origem"/>
+                                </div>
+                                <div className="col-sm-12 col-md-auto col-lg-4">
+                                    <label>Abrigo</label>
+                                    <input type="radio" value="Abrigo" name="Origem"/>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                                        {/* botao registrar */}
+                    <div className="card-footer">
+                        <div className="container d-flex justify-content-center">
+                            <button className={Styles.btregistrar} onClick={'#'}>Cadastrar</button>
+                        </div>
+                    </div>
+                </form>
+                {/* form end */}
+            </div>
+        </div>
+    </>
 
 );
 

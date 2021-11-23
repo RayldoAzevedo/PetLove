@@ -1,6 +1,7 @@
 import { Col, Container, Row } from "reactstrap";
 import Image from "next/image";
 import validator from "validator";
+import Styles from "../../styles/Pet.module.css"
 
 const Login = () => {
 
@@ -22,39 +23,51 @@ const Login = () => {
     };
 
     return (
-        <Container className="imglog">
-            <Row className="linhalog">
-                <Col className="tdlog">
-                    <Image src="/log1.jpg" width={370} height={458} />
-                </Col>
-                <Col >
-                    <h1>login</h1>
-                    <form className='formulario'>
-                        <div className="mb-3">
-                            <label for="exampleInputEmail1" className="form-label-sm">Nome</label>
-                            <input type="Nome" name='nome' className="form-control form-control-sm" id="exampleInputEmail1" aria-describedby="logNome" placeholder="Digite sem nome" />
-                        </div>
+            <div className ="d-flex flex-row container d-flex justify-content-center" >
+                <Row>
+                    <Col className="tdlog">
+                        <Image src="/log1.jpg" width={370} height={458} />
+                    </Col>
+                </Row>
+                <Row >
+                    <Col className={Styles.borda}>
+                        <div className="col-sm-12 col-md-12 col-lg-6 card-formulario" id={Styles.corpo}>
+                            <div className="card" >
+                                <div className="card-header text-center">
+                                    <h2>Entrar</h2>
+                                </div>
+                                <div className="card-body">
 
-                        <div className="mb-3">
-                            <label for="exampleInputPassword1" className="form-label-sm">Senha</label>
-                            <input type="password" className="form-control form-control-sm" id="exampleInputPassword1" />
-                        </div>
+                                    <form action="" method="post" >
+                                        <div className="form-floating mb-3">
+                                            <input type="email" className="form-control" id="floatingInputEmail" placeholder="name@example.com" />
+                                            <label htmlFor="floatingInputEmail">Seu e-mail</label>
+                                        </div>
+                                        <div className="form-floating">
+                                            <input type="password" className="form-control" id="floatingPassword" placeholder="Sua senha" />
+                                            <label htmlFor="floatingPassword">Sua senha</label>
+                                        </div>
+                                    </form>
 
-                        <div className="mb-3 form-check">
-                            <input type="checkbox" id="exampleCheck1" className="form-check-input" id="exampleCheck1" />
-                            <label for="exampleCheck1" className="form-check-label">Mantenha conectado</label>
-                        </div>
-                        <div className="d-grid gap-2">
-                            <button type="submit" className="btn btn-primary btvejamais lg" onClick={() => valid()}>Entrar</button>
-                        </div>
-                        <p className="link">
-                            <br />Ainda não tem conta?<a href="/cadastrouser">Cadastre-se</a>
-                        </p>
-                    </form>
-                </Col>
-            </Row>
+                                </div>
+                                <div className="card-footer">
 
-        </Container>
+                                    <div className="mb-3 form-check d-flex justify-content-center" >
+                                        <input type="checkbox" id="exampleCheck1" className="form-check-input" id="exampleCheck1" />
+                                        <label for="exampleCheck1" className="form-check-label">Mantenha conectado</label>
+                                    </div>
+                                    <div className="d-grid gap-2">
+                                        <button type="submit" className="btn btn-primary btvejamais lg" onClick={() => valid()}>Entrar</button>
+                                    </div>
+                                    <div className="link">
+                                        <br />Ainda não tem conta?<a href="/cadastrouser">Cadastre-se</a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </Col>
+                </Row>
+            </div>
     );
 };
 
