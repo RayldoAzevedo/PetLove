@@ -96,16 +96,16 @@ const CadPet = () => (
                             </div>
                         </div>
 
-                        {/* tamanho */}
+                        {/* Porte */}
                         <div className="col-sm-12 col-md-auto col-lg-3 col" >
                             <div className="form-floating">
-                                <select name="Tamanho" className="form-select" id="floatingSelectTamanho">
-                                    <option value="sel">Tamanho</option>
+                                <select name="Porte" className="form-select" id="floatingSelectPorte">
+                                    <option value="sel">Porte</option>
                                     <option value="pequeno">Pequeno</option>
                                     <option value="medio">Médio</option>
                                     <option value="grande">Grande</option>
                                 </select>
-                                <label htmlFor="floatingSelectTamanho">Tamanho</label>
+                                <label htmlFor="floatingSelectPorte">Porte</label>
                             </div>
                         </div>
 

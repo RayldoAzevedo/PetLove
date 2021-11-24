@@ -32,7 +32,7 @@ const Login = () => {
                 {/* formulario */}
                 <div className="col-sm-8 col-md-auto col-lg-6 card-formulario" >
                     <div className="card" >
-                        <div className="card-header text-center">
+                        <div className="card-header text-center header">
                             <h2>Entrar</h2>
                         </div>
 
@@ -55,16 +55,18 @@ const Login = () => {
                             <label for="exampleCheck1" className="form-check-label">Mantenha conectado</label>
                         </div>
                         <div className="card-footer ">
-                            <div className=" col-sm-8 col-lg-2 d-grid gap-2 align-items-center">
-                                <button type="submit" className="btn btn-primary btvejamais lg justify-content-center" onClick={() => valid()}>Entrar</button>
+                            <div className="col-sm-8 col-lg-12 borderteste">
+                                <button type="submit" className="btn btn-primary btvejamais lg" onClick={() => valid()}>Entrar</button>
+                            </div>
+                            <div className=" link col-lg-12">
+                                <br/><br/>Ainda não tem conta? <a href="/cadastrouser" className="mark"> Cadastre-se</a>
                             </div>
                         </div>
-                        <div className="link">
-                            <br />Ainda não tem conta?<a href="/cadastrouser">Cadastre-se</a>
 
-                        </div>
                     </div>
+
                 </div>
+
             </div>
         </div>
     );

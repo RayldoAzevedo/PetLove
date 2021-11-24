@@ -9,7 +9,7 @@ import Styles from "../styles/User.module.css"
 
 export default function Home() {
     return (
-        <div >
+        <div>
             {/* <Top/>  */}
             <TopLogin />
             <div className="container corpo">
@@ -141,8 +141,11 @@ export default function Home() {
                         </div>
                     </div>
                 </div>
-
+                <div className="link col-lg-12 trespacamento">
+                    <br /><br />Já é cadastrado? <a href="/login" className="mark"> Faça Login</a>
+                </div>
             </div>
+
             <CatServico />
             <Footer />
         </div>
