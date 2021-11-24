@@ -23,16 +23,15 @@ const Login = () => {
 
     return (
         <div className="container paddingbotton" >
-            <div className="row">
+            <div className="row align-items-center">
                 {/* imagem */}
-                <div className="col-sm-8 col-lg-5 tdlog">
+                <div className="col-sm-8 col-lg-4 tdlog">
                     <Image src="/log1.jpg" width={370} height={458} />
                 </div>
 
                 {/* formulario */}
                 <div className="col-sm-8 col-md-auto col-lg-6 card-formulario" >
                     <div className="card" >
-
                         <div className="card-header text-center">
                             <h2>Entrar</h2>
                         </div>
@@ -50,19 +49,19 @@ const Login = () => {
                             </form>
                         </div>
 
-                        <div className="card-footer">
-                            <div className="mb-3 form-check d-flex justify-content-center" >
-                                <input type="checkbox" id="exampleCheck1" className="form-check-input" id="exampleCheck1" />
-                                <label for="exampleCheck1" className="form-check-label">Mantenha conectado</label>
-                            </div>
+
+                        <div className="mb-3 form-check d-flex justify-content-center" >
+                            <input type="checkbox" id="exampleCheck1" className="form-check-input" id="exampleCheck1" />
+                            <label for="exampleCheck1" className="form-check-label">Mantenha conectado</label>
                         </div>
-                        <div className="row">
-                            <div className="d-grid gap-2 text-center  paddingbotton">
+                        <div className="card-footer ">
+                            <div className=" col-sm-8 col-lg-2 d-grid gap-2 align-items-center">
                                 <button type="submit" className="btn btn-primary btvejamais lg justify-content-center" onClick={() => valid()}>Entrar</button>
                             </div>
-                            <div className="link">
-                                <br />Ainda não tem conta?<a href="/cadastrouser">Cadastre-se</a>
-                            </div>
+                        </div>
+                        <div className="link">
+                            <br />Ainda não tem conta?<a href="/cadastrouser">Cadastre-se</a>
+
                         </div>
                     </div>
                 </div>
