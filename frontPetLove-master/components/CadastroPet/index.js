@@ -21,7 +21,7 @@ const CadPet = () => (
                     {/* nome */}
                     <div className="row">
                         <div className="col-sm-12 col-md-12 col-lg-6">
-                            <div className="form-floating mb-3">
+                            <div className="form-floating mb-3 mt-3">
                                 <input type="text"
                                     className="form-control"
                                     id="floatingInputNome"
@@ -33,7 +33,7 @@ const CadPet = () => (
 
                         {/* nascimento */}
                         <div className="col-sm-12 col-md-12 col-lg-6">
-                            <div className="form-floating mb-3">
+                            <div className="form-floating mb-3 mt-3">
                                 <input type="text"
                                     className="form-control"
                                     id="floatingInputNascimento"
@@ -164,7 +164,7 @@ const CadPet = () => (
                     </div>
                                         {/* botao registrar */}
                     <div className="card-footer">
-                        <div className="container d-flex justify-content-center">
+                        <div className="container d-flex justify-content-center mb-2 mt-2">
                             <button className={Styles.btregistrar} onClick={'#'}>Cadastrar</button>
                         </div>
                     </div>

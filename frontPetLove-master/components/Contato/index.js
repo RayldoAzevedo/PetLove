@@ -12,16 +12,16 @@ const Contato = () => {
                     <article className={Styles.letter}>
                         <div className={Styles.side}>
                             <h1 className={Styles.h1}>Contate-Nos</h1>
-                            <div>
+                            <div className="col-sm-8 mt-5 mb-3">
                                 <textarea placeholder="Sua mensagem" className={Styles.textarea}></textarea>
                             </div>
                         </div>
                         <div className={Styles.side}>
-                            <div className="col-sm-8 col-md-5">
+                            <div className="col-sm-8 col-md-5 mt-5">
                                 <input type='text' placeholder='Seu nome' className={Styles.input}></input>
                             </div>
 
-                            <div className="col-sm-8 col-g-md-5">
+                            <div className="col-sm-8 col-g-md-5 mt-2 mb-3">
                                 <input type="email" placeholder="Seu email" className={Styles.input}></input>
                             </div>
                             <div>
