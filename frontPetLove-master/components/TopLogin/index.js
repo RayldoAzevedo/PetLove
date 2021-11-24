@@ -4,37 +4,41 @@ import Image from 'next/image';
 
 const TopLogin = () =>(
 <div className="container">
-  
     <div className="row">
-      <div className="col-sm-8">
-        <div className="row">
-          <div className="col-sm-4">
-            <Image src="/logo.png" width={169} height={91} />
+
+      {/* imagem */}
+      <div className="col-sm-4 col-lg-2">
+        <Image src="/logo.png" width={169} height={91} />
+      </div>
+
+      {/* menu */}
+      <div className="col-sm-4 col-lg-6">
+        <Nav className="topnav">
+          <div className="col-sm-8 col-lg-2">
+            <NavItem className="navmark">
+              <NavLink className="nav" href="/" >Home</NavLink>
+            </NavItem>
           </div>
-          <div className="col-sm-8">
-            <Nav className="topnav">
-              <NavItem>
-                <NavLink className="nav" href="/" >Home</NavLink>
-              </NavItem>
-              <NavItem>
-                <NavLink className="nav" href="/quemsomos">Quem somos</NavLink>
-              </NavItem>
-              <NavItem>
-                <NavLink className="nav" href="/cuidados">Pet Care</NavLink>
-              </NavItem>
-              <NavItem>
-                <NavLink  className="nav" href="/Contato">Contato</NavLink>
-              </NavItem>
-            </Nav>
+          <div className="col-sm-8 col-lg-2">
+            <NavItem className="navmark">
+              <NavLink className="nav" href="/quemsomos">Sobre</NavLink>
+            </NavItem>
           </div>
-        </div >
-    </div>
-    <div className="col-sm-4" >
-        {' '}
+          <div className="col-sm-8 col-lg-3">
+            <NavItem className="navmark">
+              <NavLink className="nav" href="/cuidados">Pet Care</NavLink>
+            </NavItem>
+          </div>
+          <div className="col-sm-8 col-lg-2">
+            <NavItem className="navmark">
+              <NavLink className="nav" href="/Contato">Contato</NavLink>
+            </NavItem>
+          </div>
+        </Nav>
+      </div>
+
     </div>
   </div>
-
-</div>
 );
 
 export default TopLogin;

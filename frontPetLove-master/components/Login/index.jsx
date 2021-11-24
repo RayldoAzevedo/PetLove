@@ -17,57 +17,57 @@ const Login = () => {
                 alert('EMail invlaido');
                 error = true;
             }
-
             if (!error) el.submit();
         });
     };
 
     return (
-            <div className ="d-flex flex-row container d-flex justify-content-center" >
-                <Row>
-                    <Col className="tdlog">
-                        <Image src="/log1.jpg" width={370} height={458} />
-                    </Col>
-                </Row>
-                <Row >
-                    <Col className={Styles.borda}>
-                        <div className="col-sm-12 col-md-12 col-lg-6 card-formulario" id={Styles.corpo}>
-                            <div className="card" >
-                                <div className="card-header text-center">
-                                    <h2>Entrar</h2>
-                                </div>
-                                <div className="card-body">
+        <div className="container paddingbotton" >
+            <div className="row">
+                {/* imagem */}
+                <div className="col-sm-8 col-lg-5 tdlog">
+                    <Image src="/log1.jpg" width={370} height={458} />
+                </div>
 
-                                    <form action="" method="post" >
-                                        <div className="form-floating mb-3">
-                                            <input type="email" className="form-control" id="floatingInputEmail" placeholder="name@example.com" />
-                                            <label htmlFor="floatingInputEmail">Seu e-mail</label>
-                                        </div>
-                                        <div className="form-floating">
-                                            <input type="password" className="form-control" id="floatingPassword" placeholder="Sua senha" />
-                                            <label htmlFor="floatingPassword">Sua senha</label>
-                                        </div>
-                                    </form>
+                {/* formulario */}
+                <div className="col-sm-8 col-md-auto col-lg-6 card-formulario" >
+                    <div className="card" >
 
-                                </div>
-                                <div className="card-footer">
+                        <div className="card-header text-center">
+                            <h2>Entrar</h2>
+                        </div>
 
-                                    <div className="mb-3 form-check d-flex justify-content-center" >
-                                        <input type="checkbox" id="exampleCheck1" className="form-check-input" id="exampleCheck1" />
-                                        <label for="exampleCheck1" className="form-check-label">Mantenha conectado</label>
-                                    </div>
-                                    <div className="d-grid gap-2">
-                                        <button type="submit" className="btn btn-primary btvejamais lg" onClick={() => valid()}>Entrar</button>
-                                    </div>
-                                    <div className="link">
-                                        <br />Ainda não tem conta?<a href="/cadastrouser">Cadastre-se</a>
-                                    </div>
+                        <div className="card-body">
+                            <form action="" method="post" >
+                                <div className="form-floating mb-3">
+                                    <input type="email" className="form-control" id="floatingInputEmail" placeholder="name@example.com" />
+                                    <label htmlFor="floatingInputEmail">Seu e-mail</label>
                                 </div>
+                                <div className="form-floating">
+                                    <input type="password" className="form-control" id="floatingPassword" placeholder="Sua senha" />
+                                    <label htmlFor="floatingPassword">Sua senha</label>
+                                </div>
+                            </form>
+                        </div>
+
+                        <div className="card-footer">
+                            <div className="mb-3 form-check d-flex justify-content-center" >
+                                <input type="checkbox" id="exampleCheck1" className="form-check-input" id="exampleCheck1" />
+                                <label for="exampleCheck1" className="form-check-label">Mantenha conectado</label>
                             </div>
                         </div>
-                    </Col>
-                </Row>
+                        <div className="row">
+                            <div className="d-grid gap-2 text-center  paddingbotton">
+                                <button type="submit" className="btn btn-primary btvejamais lg justify-content-center" onClick={() => valid()}>Entrar</button>
+                            </div>
+                            <div className="link">
+                                <br />Ainda não tem conta?<a href="/cadastrouser">Cadastre-se</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
             </div>
+        </div>
     );
 };
 
